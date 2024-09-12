@@ -23,8 +23,7 @@ body:
   - type: dropdown
     attributes:
       label: "Kotaemon component"
-      description: |
-        Please select the Kotaemon component where you found the bug.
+      description: "Please select the Kotaemon component where you found the bug."
       multiple: true
       options:
         - "Setup Script"
@@ -33,9 +32,7 @@ body:
         - "GraphRAG Integration"
         - "File Management"
         - "LLM & Embedding Models (Incl local LLMs)"
-        - "Docker build & CI/CD" 
-      validations:
-        required: false
+        - "Docker build & CI/CD"
 
   - type: textarea
     attributes:
