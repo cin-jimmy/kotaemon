@@ -34,8 +34,8 @@ body:
         - "LLM & Embedding Models (Incl local LLMs)"
         - "Docker build & CI/CD"
         - "Others"
-      validations:
-        required: true
+    validations:
+       required: true
 
   - type: textarea
     attributes:
