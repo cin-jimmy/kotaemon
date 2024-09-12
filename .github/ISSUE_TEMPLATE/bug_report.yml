@@ -1,56 +1,92 @@
-name: "Bug Report"
-description: Report something that is not working as expected
-title: "[BUG] - <title>"
+# Kotaemon 🤖, Apache-2.0 license
+
+name: "🐞 Bug Report"
+description: Problems with Kotaemon
+title: "[BUG] "
 labels: ["bug"]
+project: ["Kotaemon"]
 body:
   - type: markdown
     attributes:
       value: |
-        *Please fill this form with as much information as possible.*
+        Thank you for submitting a Kotaemon 🐞 Bug Report!
+        
+  - type: checkboxes
+    attributes:
+      label:  Search before asking
+      description: >
+        Kindly look up the Kotaemon [issues](https://github.com/Cinnamon/kotaemon/issues) to see if any similar bug report already exists.
+      options: 
+      - label: >
+          I have looked up the issue pool and found no similar bug report!
+        required: true
+
+  - type: dropdown
+    attributes:
+      label: Kotaemon component
+      description: |
+        Please select the Kotaemon component where you found the bug.
+      multiple: true
+      options:
+        - "Setup Script"
+        - "UI"
+        - "Readers (file loaders)"
+        - "GraphRAG Integration"
+        - "File Management"
+        - "LLM & Embedding Models (Incl local LLMs)"
+        - "Docker build & CI/CD" 
+      validations:
+        required: false
+
   - type: textarea
     id: description
     attributes:
-      label: "Description"
-      description: Please enter an explicit description of your issue
-      placeholder: Short and explicit description of your incident...
+      label: "Bug Description"
+      description: Please provide as much information as possible. Copy and paste console output and error messages. Use [Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) to format text, code and logs. If necessary, include screenshots for visual elements only (You can also copy and paste into the box). Providing detailed information will help us resolve the issue more efficiently.
+      placeholder: |
+        🤝 Pro Tip! To get the most helpful response, include as much information as possible (e.g., logs, tracebacks, screenshots, etc.)
     validations:
       required: true
+      
   - type: textarea
-    id: reprod
+    id: steps to reproduce
     attributes:
       label: "Reproduction steps"
-      description: Please enter an explicit description of your issue
-      value: |
-        1. Go to '...'
-        2. Click on '....'
-        3. Scroll down to '....'
-        4. See error
+      description: When filing a bug, you’ll get better help if you provide clear, understandable code or steps that others can use to reproduce the problem.
+      placeholder: |
+        ```
+        # Code or steps to reproduce your issue here
+        ```
       render: bash
     validations:
       required: true
-  - type: textarea
-    id: screenshot
-    attributes:
-      label: "Screenshots"
-      description: If applicable, add screenshots to help explain your problem.
-      value: |
-        ![DESCRIPTION](LINK.png)
-      render: bash
-    validations:
-      required: false
-  - type: textarea
-    id: logs
-    attributes:
-      label: "Logs"
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: bash
-    validations:
-      required: false
+    
+#  - type: textarea
+#    id: screenshot
+#    attributes:
+#      label: "Screenshots"
+#      description: If applicable, add screenshots to help explain your problem.
+#      value: |
+#        ![DESCRIPTION](LINK.png)
+#      render: bash
+#    validations:
+#      required: false
+ 
+      
+#  - type: textarea
+#    id: logs
+#    attributes:
+#      label: "Logs"
+#      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+#      render: bash
+#    validations:
+#      required: false
+      
   - type: dropdown
     id: browsers
     attributes:
       label: "Browsers"
-      description: What browsers are you seeing the problem on ?
+      description: Which browsers are you using when you see the problem?
       multiple: true
       options:
         - Firefox
@@ -62,11 +98,12 @@ body:
         - Other
     validations:
       required: false
+      
   - type: dropdown
     id: os
     attributes:
       label: "OS"
-      description: What is the impacted environment ?
+      description: What is the impacted environment?
       multiple: true
       options:
         - Windows
@@ -75,11 +112,10 @@ body:
         - Other
     validations:
       required: false
+      
   - type: textarea
-    id: additional_information
     attributes:
-      label: "Additional information"
-      description: Add any relevant information or context.
-      placeholder:
+      label: "Remark"
+      description: Is there anything else you would like to share?
     validations:
       required: false
