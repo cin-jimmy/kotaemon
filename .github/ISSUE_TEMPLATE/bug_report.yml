@@ -1,10 +1,9 @@
 # Kotaemon 🤖, Apache-2.0 license
 
 name: "🐞 Bug Report"
-description: Problems with Kotaemon
+description: "Problems with Kotaemon"
 title: "[BUG] "
 labels: ["bug"]
-project: ["Kotaemon"]
 body:
   - type: markdown
     attributes:
@@ -13,7 +12,7 @@ body:
         
   - type: checkboxes
     attributes:
-      label:  Search before asking
+      label:  "Search before asking"
       description: >
         Kindly look up the Kotaemon [issues](https://github.com/Cinnamon/kotaemon/issues) to see if any similar bug report already exists.
       options: 
@@ -23,7 +22,7 @@ body:
 
   - type: dropdown
     attributes:
-      label: Kotaemon component
+      label: "Kotaemon component"
       description: |
         Please select the Kotaemon component where you found the bug.
       multiple: true
@@ -39,20 +38,18 @@ body:
         required: false
 
   - type: textarea
-    id: description
     attributes:
       label: "Bug Description"
-      description: Please provide as much information as possible. Copy and paste console output and error messages. Use [Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) to format text, code and logs. If necessary, include screenshots for visual elements only (You can also copy and paste into the box). Providing detailed information will help us resolve the issue more efficiently.
+      description: "Please provide as much information as possible. Copy and paste console output and error messages. Use [Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) to format text, code and logs. If necessary, include screenshots for visual elements only (You can also copy and paste into the box). Providing detailed information will help us resolve the issue more efficiently."
       placeholder: |
         🤝 Pro Tip! To get the most helpful response, include as much information as possible (e.g., logs, tracebacks, screenshots, etc.)
     validations:
       required: true
       
   - type: textarea
-    id: steps to reproduce
     attributes:
-      label: "Reproduction steps"
-      description: When filing a bug, you’ll get better help if you provide clear, understandable code or steps that others can use to reproduce the problem.
+      label: "Steps to reproduce"
+      description: "When filing a bug, you’ll get better help if you provide clear, understandable code or steps that others can use to reproduce the problem."
       placeholder: |
         ```
         # Code or steps to reproduce your issue here
@@ -83,10 +80,9 @@ body:
 #      required: false
       
   - type: dropdown
-    id: browsers
     attributes:
       label: "Browsers"
-      description: Which browsers are you using when you see the problem?
+      description: "Which browsers are you using when you see the problem?"
       multiple: true
       options:
         - Firefox
@@ -100,10 +96,9 @@ body:
       required: false
       
   - type: dropdown
-    id: os
     attributes:
       label: "OS"
-      description: What is the impacted environment?
+      description: "What is the impacted environment?"
       multiple: true
       options:
         - Windows
