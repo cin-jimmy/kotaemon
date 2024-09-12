@@ -33,6 +33,9 @@ body:
         - "File Management"
         - "LLM & Embedding Models (Incl local LLMs)"
         - "Docker build & CI/CD"
+        - "Others"
+      validations:
+        required: true
 
   - type: textarea
     attributes:
@@ -66,7 +69,6 @@ body:
 #    validations:
 #      required: false
  
-      
 #  - type: textarea
 #    id: logs
 #    attributes:
